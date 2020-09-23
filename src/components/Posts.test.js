@@ -12,8 +12,8 @@ const server = setupServer(
         {
           userId: 1,
           id: 1,
-          title: "Hassan",
-          body: "is the best!!!",
+          title: "Mock Server Worker",
+          body: "Unbelievable!!!",
         },
       ])
     );
@@ -29,7 +29,7 @@ test("renders learn react link", async () => {
   await act(async () => {
     ({ getByText } = render(<Posts />));
   });
-  await waitFor(() => screen.getByText(/Hassan/));
-  const linkElement = getByText(/Hassan/i);
+  await waitFor(() => screen.getByText(/Mock/));
+  const linkElement = getByText(/unbelievable/i);
   expect(linkElement).toBeInTheDocument();
 });
